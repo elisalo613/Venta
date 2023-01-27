@@ -4,6 +4,7 @@
  */
 
 package com.mycompany.venta;
+import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -11,12 +12,11 @@ import java.util.*;
  * @author elisalo613
  */
 public class Venta {
-    public static void main(String[] args){
-    Date Fecha;
-    Cliente cliente;
-    Vendedor vendedor;
-    List ListaDetalles;
-    int IDventa;
+    private LocalDateTime fecha;
+    private Cliente cliente;
+    private Vendedor vendedor;
+    private List listaDetalles;
+    private Integer idVenta;
 
 //    public static void main(String[] args) {
 //        Venta venta1 = new Venta();
@@ -27,31 +27,48 @@ public class Venta {
 //        System.out.println(venta1.ListaDetalles);
 //        System.out.println(venta1.IDventa);
 //    }
-}}
+    
+    
+    // getters and setters
 
-class Vendedor {
-    String Nombre;
-    int Telefono;
-    String Mail;
-    List ListaVentas;
-    int IDvendedor;}
+    public LocalDateTime getFecha() {
+        return fecha;
+    }
 
-class Detalle {
-    int Precio;
-    Producto producto;
-    int Cantidad;
-    int IDdetalle;}
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
+    }
 
-class Cliente {
-    String Nombre;
-    String Domicilio;
-    int Telefono;
-    List ListaVentas;
-    int IDcliente;}
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-class Producto {
-    String Nombre;
-    Date Vencimiento;
-    int Precio;
-    int IDproducto;}
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
+    public Vendedor getVendedor() {
+        return vendedor;
+    }
+
+    public void setVendedor(Vendedor vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    public List getListaDetalles() {
+        return listaDetalles;
+    }
+
+    public void setListaDetalles(List listaDetalles) {
+        this.listaDetalles = listaDetalles;
+    }
+
+    public Integer getIdVenta() {
+        return idVenta;
+    }
+
+    public void setIdVenta(Integer idVenta) {
+        this.idVenta = idVenta;
+    }
+    
+}
