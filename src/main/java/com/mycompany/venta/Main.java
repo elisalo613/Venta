@@ -4,6 +4,7 @@
  */
 package com.mycompany.venta;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -53,14 +54,18 @@ public class Main {
         Producto manzana = new Producto();
         manzana.setNombre("manzana");
         manzana.setPrecio(150);
-        manzana.setVencimiento(LocalDateTime.now());
+        LocalDate vencimientoManzana = LocalDate.of(2023, 4, 13);
+        manzana.setVencimiento(vencimientoManzana);
         manzana.setIdProducto(1);
         
         Producto naranja = new Producto();
         naranja.setNombre("naranja");
         naranja.setPrecio(100);
-        naranja.setVencimiento(LocalDateTime.now());
+        LocalDate vencimientoNaranja = LocalDate.of(2023, 4, 15);
+        naranja.setVencimiento(vencimientoNaranja);
         naranja.setIdProducto(2);
+        
+        System.out.println("El dia de vencimiento de la manzana es = " + manzana.getVencimiento());
         
         // Lista de detalles
         
@@ -116,7 +121,8 @@ public class Main {
         Producto banana = new Producto();
         banana.setNombre("banana");
         banana.setPrecio(200);
-        banana.setVencimiento(LocalDateTime.now());
+        LocalDate vencimientoBanana = LocalDate.of(2023, 2,1 );
+        naranja.setVencimiento(vencimientoNaranja);
         banana.setIdProducto(3);
         
         // Lista de detalles

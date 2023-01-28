@@ -4,6 +4,7 @@
  */
 package com.mycompany.venta;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -13,7 +14,7 @@ import java.util.Date;
  */
 public class Producto {
     private String nombre;
-    private LocalDateTime vencimiento;
+    private LocalDate vencimiento;
     private Integer precio;
     private Integer idProducto;
     
@@ -27,11 +28,11 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public LocalDateTime getVencimiento() {
+    public LocalDate getVencimiento() {
         return vencimiento;
     }
 
-    public void setVencimiento(LocalDateTime vencimiento) {
+    public void setVencimiento(LocalDate vencimiento) {
         this.vencimiento = vencimiento;
     }
 
