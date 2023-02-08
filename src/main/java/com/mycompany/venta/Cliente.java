@@ -17,6 +17,22 @@ public class Cliente {
     private List listaVentas;
     private Integer idCliente;
     
+    // constructor
+    
+    public Cliente(String nombre, String domicilio, long telefono, List listaVentas, Integer idCliente)
+    {this.nombre = nombre;
+    this.domicilio = domicilio;
+    this.telefono = telefono;
+    this.listaVentas = listaVentas;
+    this.idCliente = idCliente;}
+    
+    // toString
+    
+    @Override
+    public String toString() {
+        return getClass().getName() + "[nombre=" + nombre +",domicilio=" + domicilio +",telefono =" + telefono + ",listaVentas=" + listaVentas + ",idCliente=" + idCliente + "]";
+   }
+    
     // getters and setters
 
     public String getNombre() {

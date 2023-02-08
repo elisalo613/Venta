@@ -18,6 +18,22 @@ public class Producto {
     private Integer precio;
     private Integer idProducto;
     
+    // Constructor
+    
+    public Producto(String nombre, LocalDate vencimiento, Integer precio, Integer idProducto)
+    {this.nombre = nombre;
+    this.vencimiento = vencimiento;
+    this.precio = precio;
+    this.idProducto = idProducto;}
+    
+    // toString
+    
+    @Override
+    public String toString() {
+        return getClass().getName() + "[nombre=" + nombre +",vencimiento=" + vencimiento +",precio =" + precio + ",idProducto=" + idProducto + "]";
+   }
+   
+
     // getters and setters
 
     public String getNombre() {

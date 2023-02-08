@@ -17,6 +17,23 @@ public class Vendedor {
     private List listaVentas;
     private Integer idVendedor;
     
+    // Constructor
+    
+    public Vendedor(String nombre, long telefono, String mail, List listaVentas, Integer idVendedor)
+    {this.nombre = nombre;
+    this.telefono = telefono;
+    this.mail = mail;
+    this.listaVentas = listaVentas;
+    this.idVendedor = idVendedor;}
+    
+    // toString
+    
+    @Override
+    public String toString() {
+        return getClass().getName() + "[nombre=" + nombre +",telefono=" + telefono +",mail =" + mail + ",listaVentas=" + listaVentas + ",idVendedor=" + idVendedor + "]";
+   }
+   
+            
     // getters and setters
 
     public String getNombre() {

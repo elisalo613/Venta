@@ -14,6 +14,22 @@ public class Detalle {
     private Integer cantidad;
     private Integer idDetalle;
     
+    // Constructor
+    
+    public Detalle(Integer precio, Producto producto, Integer cantidad, Integer idDetalle)
+    {this.precio = precio;
+    this.producto = producto;
+    this.cantidad = cantidad;
+    this.idDetalle = idDetalle;
+    }
+    
+    // toString
+    
+    @Override
+    public String toString() {
+        return getClass().getName() + "[precio=" + precio +",producto=" + producto +",cantidad =" + cantidad + ",idDetalle=" + idDetalle + "]";
+   }
+   
     // getters and setters
 
     public Integer getPrecio() {

@@ -17,17 +17,23 @@ public class Venta {
     private Vendedor vendedor;
     private List listaDetalles;
     private Integer idVenta;
-
-//    public static void main(String[] args) {
-//        Venta venta1 = new Venta();
-//        venta1.Fecha = 13Junio;
-//        System.out.println(venta1.Fecha);
-//        System.out.println(venta1.Cliente);
-//        System.out.println(venta1.Vendedor);
-//        System.out.println(venta1.ListaDetalles);
-//        System.out.println(venta1.IDventa);
-//    }
     
+    // constructor
+    
+    public Venta(LocalDateTime fecha, Cliente cliente, Vendedor vendedor, List listaDetalles, Integer idVenta)
+    {this.fecha = fecha;
+    this.cliente = cliente;
+    this.vendedor = vendedor;
+    this.listaDetalles = listaDetalles;
+    this.idVenta = idVenta;}
+    
+    // toString
+    
+    @Override
+    public String toString() {
+        return getClass().getName() + "[fecha=" + fecha +",cliente=" + cliente +",vendedor =" + vendedor + ",listaDetalles=" + listaDetalles + ",idVenta=" + idVenta + "]";
+   }
+   
     
     // getters and setters
 
@@ -70,5 +76,6 @@ public class Venta {
     public void setIdVenta(Integer idVenta) {
         this.idVenta = idVenta;
     }
+    
     
 }
